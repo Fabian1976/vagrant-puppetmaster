@@ -30,7 +30,7 @@ Vagrant.configure("2") do |config|
     puppetmaster.vm.synced_folder 'puppet/manifests', '/etc/puppetlabs/code/environments/production/manifests/'
     puppetmaster.vm.synced_folder 'puppet/modules', '/etc/puppetlabs/code/environments/production/modules/'
     puppetmaster.vm.provision :shell,
-      path: 'bootstrap.sh',
+      path: 'bootstrap_puppetmaster.sh',
       upload_path: '/home/vagrant/bootstrap.sh'
   end
 end
